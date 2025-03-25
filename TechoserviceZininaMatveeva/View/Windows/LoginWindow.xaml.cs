@@ -23,5 +23,18 @@ namespace TechoserviceZininaMatveeva.View.Windows
         {
             InitializeComponent();
         }
+
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(LoginTb.Text) || string.IsNullOrEmpty(PasswordPb.Password))
+            {
+                MessageBox.Show("", "", MessageBoxButton.OK,
+                    MessageBoxImage.Warning);
+            }
+            else
+            {
+                App.currentAccount = App._context.EmployeeAccount.FirstOrDefault(ea => ea.Login)
+            }
+        }
     }
 }

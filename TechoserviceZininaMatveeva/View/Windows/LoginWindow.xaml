@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechoserviceZininaMatveeva.View.Windows"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Окно авторизации" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Логин: "/>
+        <TextBox Name="LoginTb" Grid.Column="2"/>
+        <TextBlock Grid.Row="2" Text="Пароль: "/>
+        <PasswordBox x:Name="PasswordPb" Grid.Row="3" Grid.Column="2"/>
+        <Button x:Name="LoginBtn" Grid.Row="4" Grid.Column="2" Content="Войти"
+                Click="LoginBtn_Click"/>
     </Grid>
 </Window>
